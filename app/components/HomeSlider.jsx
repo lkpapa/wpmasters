@@ -1,18 +1,8 @@
 "use client"
 import React,{useEffect, useState} from 'react';
 import Link from 'next/link';
-function HomeSlider() {
-const [pageInfo,setpageInfo]=useState([]);
-const siteUrl='https://wpmasters20.kinsta.cloud';
-    useEffect(() => {
-      fetchData();
-    }, []);
-    async function fetchData() {
-      let data=await fetch(`${siteUrl}/wp-json/api/v1/pages/?page_name=homepage`);
-      let res=await data.json();
-      console.log(res)
-      setpageInfo(res);
-    }
+function HomeSlider({slider}) {
+const [pageInfo,setpageInfo]=useState(slider);
   return (
     <>
    <section className="section-intro intro-homepage">
@@ -23,8 +13,8 @@ const siteUrl='https://wpmasters20.kinsta.cloud';
             <span className="subtitle">{pageInfo[0]?.acf_field?.intro_title_sub}</span>
            <h1 dangerouslySetInnerHTML={{ __html: pageInfo[0]?.acf_field?.intro_title}}></h1>
           </div>
-          <div className="content">
-             <p dangerouslySetInnerHTML={{ __html: pageInfo[0]?.acf_field?.intro_content}} ></p>
+          <div className="content" dangerouslySetInnerHTML={{ __html: pageInfo[0]?.acf_field?.intro_content}}>
+         
           </div>
           <div className="cta">
             <Link href="" className="button-default">{pageInfo[0]?.acf_field?.intro_button_primary_text}</Link>
