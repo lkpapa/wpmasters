@@ -1,0 +1,76 @@
+// ------------------------------------
+//
+// Base
+//
+// ------------------------------------
+
+html {
+  margin:0;
+  padding:0;
+}
+
+body {
+  background-color: $color-bg-dark;
+  margin:0;
+  padding:0;
+  width: 100%;
+}
+
+body, p {
+  font-family: $font-body;
+  color: $color-text-light;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a {
+  color: $color-text-light;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  color: $color-text-light;
+  margin: 0;
+
+  span {
+    @include gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.title {
+  .subtitle {
+    font-family: $font-subheading;
+    font-size: 16px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+ul {
+  margin:0;
+  padding:0;
+
+  li {
+    margin:0;
+    padding:0;
+  }
+}
+
+ol {
+  margin:0;
+  padding:0;
+}
+
+

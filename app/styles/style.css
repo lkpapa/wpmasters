@@ -1,0 +1,353 @@
+/* manrope-regular - latin */
+@font-face {
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../../public/assets/fonts/manrope-v14-latin-regular.woff2") format("woff2"), url("../../../public/assets/fonts/manrope-v14-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-700 - latin */
+@font-face {
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../../public/assets/fonts/manrope-v14-latin-700.woff2") format("woff2"), url("../../../public/assets/fonts/manrope-v14-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* manrope-800 - latin */
+@font-face {
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../../public/assets/fonts/manrope-v14-latin-800.woff2") format("woff2"), url("../../../public/assets/fonts/manrope-v14-latin-800.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* mulish-regular - latin */
+@font-face {
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../../public/assets/fonts/mulish-v12-latin-regular.woff2") format("woff2"), url("../../../public/assets/fonts/mulish-v12-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* mulish-italic - latin */
+@font-face {
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../../public/assets/fonts/mulish-v12-latin-italic.woff2") format("woff2"), url("../../../public/assets/fonts/mulish-v12-latin-italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* mulish-700 - latin */
+@font-face {
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../../public/assets/fonts/mulish-v12-latin-700.woff2") format("woff2"), url("../../../public/assets/fonts/mulish-v12-latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* mulish-700italic - latin */
+@font-face {
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../../../public/assets/fonts/mulish-v12-latin-700italic.woff2") format("woff2"), url("../../../public/assets/fonts/mulish-v12-latin-700italic.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* blinker-regular - latin */
+@font-face {
+  font-display: block; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Blinker";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../../public/assets/fonts/blinker-v13-latin-regular.woff2") format("woff2"), url("../../../public/assets/fonts/blinker-v13-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #192327;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body, p {
+  font-family: "Mulish";
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope";
+  color: #fff;
+  margin: 0;
+}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  background: rgb(238, 106, 60);
+  background: linear-gradient(135deg, rgb(238, 106, 60) 0%, rgb(246, 193, 78) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.title .subtitle {
+  font-family: "Blinker";
+  font-size: 16px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.button-default {
+  position: relative;
+  font-family: "Blinker";
+  font-size: 17px;
+  line-height: normal;
+  border-radius: 40px;
+  padding: 18px 45px;
+  color: #fff;
+  display: inline-block;
+  transition: all 0.3s linear;
+  background-color: #37608f;
+}
+.button-default:hover {
+  background-color: #4670A2;
+}
+
+.button-alt {
+  position: relative;
+  font-family: "Blinker";
+  font-size: 17px;
+  line-height: normal;
+  border-radius: 40px;
+  padding: 18px 45px;
+  color: #fff;
+  display: inline-block;
+  transition: all 0.3s linear;
+  position: relative;
+  box-shadow: inset 0 0 0 2px #fff;
+  overflow: hidden;
+  z-index: 0;
+}
+.button-alt::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(135deg, rgb(238, 106, 60) 0%, rgb(246, 193, 78) 100%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.button-alt:hover::before {
+  opacity: 1;
+}
+
+.button-clean {
+  position: relative;
+  font-family: "Blinker";
+  font-size: 17px;
+  line-height: normal;
+  border-radius: 40px;
+  padding: 18px 45px;
+  color: #fff;
+  display: inline-block;
+  transition: all 0.3s linear;
+}
+.button-clean::after {
+  content: "";
+  background-image: url("https://wpmasters20.kinsta.cloud/wp-content/themes/wp-masters/assets/images/icons/arrow-right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 7px;
+  width: 15px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 3px;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.2s linear;
+}
+.button-clean:hover::after {
+  right: 15px;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 992px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1430px;
+  }
+}
+
+header {
+  background-color: #192327;
+  padding: 25px 0;
+}
+header .row {
+  align-items: center;
+}
+header #main-menu {
+  justify-content: center;
+}
+header #menu-main-menu {
+  gap: 40px;
+}
+header .navbar a {
+  font-family: "Blinker";
+  font-size: 18px;
+}
+header .navbar a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 1px #fff;
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: transform 250ms ease-in-out;
+}
+header .navbar a:hover:after {
+  transform: scaleX(1);
+}
+header .col-cta {
+  justify-content: flex-end;
+}
+
+@media (min-width:767px) {
+  .intro-homepage {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    max-height: 680px;
+  }
+}
+.intro-homepage .col-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 0;
+}
+.intro-homepage .col-content .content p {
+  max-width: 60ch;
+}
+.intro-homepage .col-services {
+  display: flex;
+  margin: 30px 0;
+}
+.intro-homepage .col-services .inner {
+  display: flex;
+  gap: 20px;
+}
+.intro-homepage .col-services .inner .item {
+  position: relative;
+  display: flex;
+  flex: 1;
+  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.intro-homepage .col-services .inner .item:hover {
+  flex-grow: 3.5;
+}
+.intro-homepage .col-services .inner .item:hover img {
+  display: none;
+}
+.intro-homepage .col-services .inner .item:hover video {
+  display: block;
+}
+.intro-homepage .col-services .inner .item img, .intro-homepage .col-services .inner .item video {
+  width: 100%;
+  height: 520px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.intro-homepage .col-services .inner .item video {
+  display: none;
+}
+.intro-homepage .col-services .inner .item .hovered, .intro-homepage .col-services .inner .item.active {
+  flex-grow: 3.5;
+}
+.intro-homepage .col-services .inner .item .hovered img, .intro-homepage .col-services .inner .item.active img {
+  display: none;
+}
+.intro-homepage .col-services .inner .item .hovered video, .intro-homepage .col-services .inner .item.active video {
+  display: block;
+}
+.intro-homepage .col-services .inner .item .hovered::before, .intro-homepage .col-services .inner .item.active::before {
+  opacity: 0;
+}
+.intro-homepage .col-services .inner .item .hovered .label, .intro-homepage .col-services .inner .item.active .label {
+  opacity: 1;
+}
+.intro-homepage .col-services .inner .item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+.intro-homepage .col-services .inner .item .label {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 10px 15px;
+  border-radius: 10px 10px 0 0;
+  width: -moz-max-content;
+  width: max-content;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}/*# sourceMappingURL=style.css.map */

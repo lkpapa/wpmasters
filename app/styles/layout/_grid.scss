@@ -1,0 +1,18 @@
+// ------------------------------------
+//
+// Grid
+//
+// ------------------------------------
+
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+  @media (min-width: 992px) {
+    max-width: 1200px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1430px;
+  }
+  margin-right: auto;
+  margin-left: auto;
+}
+

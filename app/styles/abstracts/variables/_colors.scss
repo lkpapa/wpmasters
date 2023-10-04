@@ -1,0 +1,44 @@
+// ------------------------------------
+//
+// Colors
+//
+// ------------------------------------
+
+// Default colors
+$color-primary: #ee6a3c;
+$color-secondary: #f6c14e;
+$color-white: #fff;
+//$color-blue-dark: #192327;
+$color-blue-dark: #192327;
+$color-blue: #37608f;
+$color-blue-light: #4670A2;
+$color-black: #000;
+
+// Background colors
+$color-bg-dark: $color-blue-dark;
+$color-bg-normal: #192327;
+$color-bg-light: #2d4656;
+
+// Text colors
+$color-text-gray: #e7e8e9;
+$color-text-light: $color-white;
+
+// Button colors
+$color-button-text: $color-white;
+$color-button-default-bg: $color-blue;
+$color-button-default-bg-hover: $color-blue-light;
+$color-button-alt-bg: $color-primary;
+$color-button-alt-hover: $color-white;
+
+//media resulution
+$breakpoints: (
+  "xs": "max-width:575.98px",
+  "sm": "(min-width:576px) and (max-width:767.98px)",
+  "md": "(min-width:768px) and (max-width:991.98px)",
+  "lg": "(min-width:992px) and (max-width:1199.98px)",
+  "xl": "(min-width:1200px) and (max-width:1399.98px)",
+  "xxl": "min-width:1400px",
+  "xlg": "min-width:767px",
+  "xls": "max-width:767px",
+);
+

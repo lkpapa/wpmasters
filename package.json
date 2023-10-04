@@ -1,0 +1,23 @@
+{
+  "name": "wpmasters",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build-dev": "cp .env.dev .env.local && yarn build",
+    "build-prod": "cp .env.prod .env.local && yarn build"
+  },
+  "dependencies": {
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.5.1",
+    "next": "13.5.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.67.0"
+  }
+}
