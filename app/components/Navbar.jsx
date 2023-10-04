@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Link from "next/link";
 import NavItem from './NavItem';
-
+import Image from 'next/image';
 const MENU_LIST = [
   { text: "Portfolio", href: "/" },
   { text: "Diensten", href: "/about" },

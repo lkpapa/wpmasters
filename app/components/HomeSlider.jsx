@@ -1,45 +1,34 @@
 "use client"
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useState} from 'react';
+import Link from 'next/link';
 function HomeSlider() {
-    const [isHovering, setIsHovering] = useState(false)
-    const [hoverStyle, setHoverStyle] = useState({})
-    const [index, setIndex] = useState(0);
-    const mouseEntered = (index) => {
-        setIsHovering(true);
-        setIndex(index + 1);
-    }
-    const mouseLeft = () => setIsHovering(false)
-
-
+const [pageInfo,setpageInfo]=useState([]);
+const siteUrl='https://wpmasters20.kinsta.cloud';
     useEffect(() => {
-        if (isHovering) {
-            setHoverStyle({
-                background: `center url("/images/stats/rounded-images/${index}.png") no-repeat`,
-                border: '1px solid #f5f5f5',
-                boxShadow: '0px 0px 10px #f5f5f5',
-                transition: 'all 0.3s ease-in-out'
-            });
-        } else {
-            setHoverStyle({});
-        }
-    }, [isHovering]);
+      fetchData();
+    }, []);
+    async function fetchData() {
+      let data=await fetch(`${siteUrl}/wp-json/api/v1/pages/?page_name=homepage`);
+      let res=await data.json();
+      console.log(res)
+      setpageInfo(res);
+    }
   return (
     <>
-        <section className="section-intro intro-homepage">
+   <section className="section-intro intro-homepage">
     <div className="container container-fluid">
       <div className="row">
         <div className="col-md-6 col-content">
           <div className="title hero-title">
-            <span className="subtitle">Jouw full service digital agency</span>
-            <h1>We help brands become online <span>legends</span></h1>
+            <span className="subtitle">{pageInfo[0]?.acf_field?.intro_title_sub}</span>
+           <h1 dangerouslySetInnerHTML={{ __html: pageInfo[0]?.acf_field?.intro_title}}></h1>
           </div>
           <div className="content">
-        <p>Een goede online positionering start met een indrukwekkend design en een perfect UX &amp; UI. Als ervaren digital agency ontzorgen onze Masters je volledig van visie en ambitie tot aan de strategie en het perfecte online resultaat.</p>
-
+             <p dangerouslySetInnerHTML={{ __html: pageInfo[0]?.acf_field?.intro_content}} ></p>
           </div>
           <div className="cta">
-            <a href="#" className="button-default">Bekijk portfolio</a>
-            <a href="#" className="button-clean">Leer ons kennen</a>
+            <Link href="" className="button-default">{pageInfo[0]?.acf_field?.intro_button_primary_text}</Link>
+            <Link href="" className="button-clean">{pageInfo[0]?.acf_field?.intro_button_secondary_text}</Link>
           </div>
         </div>
         <div className="col-md-6 col-services">
@@ -80,4 +69,4 @@ function HomeSlider() {
   )
 }
 
-export default HomeSlider
+export default React.memo(HomeSlider);
