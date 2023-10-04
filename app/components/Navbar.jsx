@@ -1,19 +1,28 @@
 'use client';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from "next/link";
 import NavItem from './NavItem';
 import Image from 'next/image';
-const MENU_LIST = [
-  { text: "Portfolio", href: "/" },
-  { text: "Diensten", href: "/about" },
-  { text: "Werken bij", href: "/" },
-  { text: "Over ons", href: "/" },
-  { text: "Contact", href: "/" },
-];
+// const MENU_LIST = [
+//   { text: "Portfolio", href: "/" },
+//   { text: "Diensten", href: "/about" },
+//   { text: "Werken bij", href: "/" },
+//   { text: "Over ons", href: "/" },
+//   { text: "Contact", href: "/" },
+// ];
+// //console.log('check2222:-',process.env.NEXT_PUBLIC_SITE_URL);
+async function getData(){
+  let res= await fetch('https://wpmasters20.kinsta.cloud/wp-json/api/v1/menues');
+   let result=await res.json();
+   return result;  
+}
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
-
+  const [navMenu,setNavMenu] = useState([]);
+  useEffect(()=>{
+    getData().then(data=>setNavMenu(data));
+    },[])
   return (
     <header>
       <div className='container'>
@@ -24,21 +33,21 @@ const Navbar = () => {
             </Link>
           </div>
           <div className='col-md-6'>
-            <nav className={`${navActive ? "active" : ""} navbar`}>
+         {navMenu  &&  <nav className={`${navActive ? "active" : ""} navbar`}>
               <ul id="menu-main-menu" className='navbar-nav'>
-                {MENU_LIST.map((menu, idx) => (
+                {navMenu && navMenu?.map((menu, idx) => (
                   <li
-                    onClick={() => {
-                      setActiveIdx(idx);
-                      setNavActive(false);
-                    }}
-                    key={menu.text}
-                  >
-                    <NavItem active={activeIdx === idx} {...menu} />
-                  </li>
+                  onClick={() => {
+                    setActiveIdx(idx);
+                    setNavActive(false);
+                  }}
+                  key={menu.post_title}
+                >
+                  <NavItem active={activeIdx === idx} {...menu} />
+                </li>
                 ))}
               </ul>
-            </nav>
+            </nav>}
           </div>
 
           <div className='col-md-3 col-cta'>

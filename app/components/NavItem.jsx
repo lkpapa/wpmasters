@@ -1,12 +1,13 @@
 import Link from "next/link";
-const NavItem = ({ text, href, active }) => {
+const NavItem = (props) => {
   return (
-    <Link href={href} 
+   <Link href={props.url} 
         className={`nav__item ${
-          active ? "active" : ""
+          props.active ? "active" : ""
         }`}
-        >{text}
-    </Link>
+        >{props.post_title}
+    </Link> 
+
   );
 };
 

@@ -7,6 +7,7 @@ const HomeSlider = dynamic(() => import('./components/HomeSlider'), {
 // import HomeSlider from './components/HomeSlider'
 //import './styles/style.scss'
 async function getData() {
+	//console.log('object',process.env.SITE_URL)
 	const res = await fetch(`https://wpmasters20.kinsta.cloud/wp-json/api/v1/pages/?page_name=homepage`)
 	if (!res.ok) {
 	  // This will activate the closest `error.js` Error Boundary
