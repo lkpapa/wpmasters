@@ -10,6 +10,9 @@
     "build-dev": "cp .env.dev .env.local && yarn build",
     "build-prod": "cp .env.prod .env.local && yarn build"
   },
+  "engines": {
+    "node": ">18 <=18.18"
+  },
   "dependencies": {
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
